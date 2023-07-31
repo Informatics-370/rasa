@@ -1,0 +1,91 @@
+version: '3.0'
+rules:
+- rule: Greet back
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Provide information about wines when the user asks about wines
+  steps:
+  - intent: ask_wines
+  - action: utter_ask_wines
+
+- rule: Provide instructions on how to purchase a wine
+  steps:
+  - intent: purchase_wine
+  - action: utter_purchase_wine
+
+- rule: Provide information about the refund process when the user requests a refund
+  steps:
+  - intent: request_refund
+  - action: utter_request_refund
+
+- rule: Provide information about returns
+  steps:
+  - intent: return_wine
+  - action: utter_return_wine
+
+- rule: Provide information on where to see orders
+  steps:
+  - intent: ask_orders
+  - action: utter_ask_orders
+
+- rule: Provide information about the wishlist when the user asks
+  steps:
+  - intent: ask_wishlist
+  - action: utter_ask_wishlist
+
+- rule: Provide information about creating an account when the user asks
+  steps:
+  - intent: create_account
+  - action: utter_create_account
+
+- rule: Provide instructions on how to edit account
+  steps:
+  - intent: ask_edit_account
+  - action: utter_edit_account_instructions
+
+- rule: Provide contact information when customer asks to speak to a human
+  steps:
+  - intent: ask_human_contact
+  - action: utter_human_contact
+
+- rule: Provide information about the venue location when the user asks
+  steps:
+  - intent: ask_location
+  - action: utter_location
+
+- rule: Provide instructions on how to purchase a ticket to an event/wine tasting event
+  steps:
+  - intent: ask_purchase_ticket
+  - action: utter_ask_purchase_ticket
+
+- rule: Provide instructions for events
+  steps:
+  - intent: ask_events
+  - action: utter_ask_events
+
+- rule: Respond to user asking about their purchased ticket
+  steps:
+  - intent: ask_purchased_ticket
+  - action: utter_purchased_ticket
+
+- rule: Activate the form if the user asks about purchasing a ticket
+  steps:
+  - intent: ask_purchase_ticket
+  - action: utter_ask_purchase_ticket
+
+- rule: Respond to "Blacklist" question
+  steps:
+  - intent: ask_meaning_blacklist
+  - action: action_respond_blacklist_meaning
+
+- rule: Fallback rule
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

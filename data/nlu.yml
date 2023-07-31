@@ -1,0 +1,723 @@
+version: '3.0'
+nlu:
+#---------------------------------------------------Greetings and goodbye---------------------------------------------------#
+- intent: greet
+  examples: |
+    - Hi
+    - Hello
+    - Hey
+    - Hi bot
+    - Hey bot
+    - Hello bot
+    - Greetings
+    - Good day
+    - How's it going?
+    - Hi there
+    - Howdy
+    - What's up?
+    - Hey there
+    - Hiya
+    - Yo
+    - Good morning
+    - Good afternoon
+    - Good evening
+    - What's new?
+    - Salutations
+    - Hello, friend
+    - Hi, how can you assist me?
+    - Hello, I need some help
+    - Hey, can you assist me?
+    - Hi, can you help me?
+    - Hello there, can you help me?
+    - Hey there, can you help me?
+    - Hi, I need some help
+    - Hello, I need some assistance
+    - Hey, can you assist me?
+    - Hi, can you help me?
+    - Hello there, can you help me?
+    - Hey there, can you help me?
+    - Hi, I need some help
+    - Hello, I need some assistance
+    - Hey, can you assist me?
+    - Hi, can you help me?
+    - Hello there, can you help me?
+    - Hey there, can you help me?
+    - Hi, I need some help
+    - Hello, I need some assistance
+    - Hi how are you
+    - How are you doing
+    - How are you
+    - Hello can you help me
+    - Hello can you please help me
+    - Hi I hope your're doing well today
+    - Hello I hope your're doing well today
+
+
+- intent: goodbye
+  examples: |
+    - Bye
+    - Goodbye
+    - See you later
+    - Bye bot
+    - Goodbye bot
+    - Farewell
+    - Later
+    - Catch you later
+    - Bye for now
+    - See you
+    - See you soon
+    - Till next time
+    - So long
+    - Good night
+    - Have a good one
+    - I'm off
+    - See you around
+    - Take care
+    - Goodbye for now
+    - See ya
+    - I'll catch up with you later
+    - I'll see you later
+    - Thank you
+    - Thank you for your help
+    - Thank you very much
+
+#---------------------------------------------------ASK ABOUT WINES---------------------------------------------------#
+- intent: ask_wines
+  examples: |
+    - Show me the wines
+    - I want to see the wines
+    - Where can I find the wines?
+    - Where are your wines?
+    - Can you show me your wine collection?
+    - Can I look at your wines?
+    - What wines do you have?
+    - What are the wines you offer?
+    - Can I see your wines?
+    - Where is your wine list?
+    - Can I check out your wines?
+    - I want to look at your wine selection.
+    - I'd like to see your wine offerings.
+    - Can I see your wine menu?
+    - I'm interested in your wines.
+    - Do you have a wine list?
+    - Let me see your wines.
+    - Can you direct me to your wines?
+    - How can I see your wine selection?
+    - Can you show me your wines?
+    - I want to know about your wines.
+    - Can you tell me about your wines?
+    - Where can I view your wines?
+    - I want to see your selection of wines.
+    - What's in your wine collection?
+    - What's your wine selection like?
+    - Where can I find your wine options?
+    - What type of wines do you carry?
+    - Can I see the wine selection?
+    - I would like to browse your wines.
+    - What kinds of wines are there?
+    - Can you display your wines?
+    - Can I peruse your wines?
+    - Show me what wines you have.
+    - Could I see your wines?
+    - I would like to view your wines.
+    - Can I get a look at your wines?
+    - Do you have a wine catalogue I can see?
+    - Let me browse your wines.
+    - How do I view your wine selection?
+    - Can you present your wines?
+    - I'd like to go over your wine options.
+    - How can I browse your wines?
+    - Where can I observe your wines?
+    - Can I survey your wines?
+    - Hello can you please help me locate the wines
+    - Hello can you please suggest me some wines
+    - Hello can you please help me find the wines
+    - Hi can you please help me find the wine list
+    - Hi I hope you're doing well today can you please help me find the wine list
+
+#---------------------------------------------------Purchase the wines---------------------------------------------------#
+- intent: purchase_wine
+  examples: |
+    - How do I purchase a wine?
+    - Where can I buy a wine?
+    - Can you guide me through the wine purchase?
+    - Tell me how to buy a wine.
+    - I'm interested in buying a wine. What should I do?
+    - What are the steps to purchase a wine?
+    - Can you assist me with the wine buying process?
+    - What's the procedure for buying a wine?
+    - How can I add a wine to my cart?
+    - I'm looking to make a wine purchase. Any advice?
+    - What do I need to do to order a wine?
+    - How does the wine buying work?
+    - Can you explain the wine purchase workflow?
+    - Where can I find the 'Add to Cart' option for wines?
+    - Is there a specific way to buy a wine?
+    - What should I know before purchasing a wine?
+    - How can I proceed with the wine purchase?
+    - Are there any special requirements for buying a wine?
+    - Can you tell me more about the checkout process for wines?
+    - I want to make a wine purchase. What's the next step?
+    - How do I finalize my wine purchase?
+    - What happens after I add a wine to my cart?
+    - How can I pay for the wine I want to buy?
+    - Can you provide information about the wine checkout?
+    - What are the payment options for buying a wine?
+    - Is there a specific page for completing the wine purchase?
+    - How long does it take to complete a wine purchase?
+    - Can you guide me on how to place an order for wine?
+    - What information do I need to provide during the wine purchase?
+    - Can I make changes to my wine order after adding it to the cart?
+    - How can I review my wine order before buying?
+    - Are there any discounts available for wine purchases?
+    - Can I track the status of my wine purchase?
+    - Is there a minimum order requirement for buying a wine?
+    - Can you explain the return policy for wine purchases?
+    - How can I cancel a wine purchase?
+    - What should I do if I face any issues during the wine purchase?
+    - Are there any age restrictions for purchasing wine?
+    - Can you provide a step-by-step guide for buying wine?
+    - How can I purchase a wine
+    - How can I buy a wine
+    - How to purchasea wine
+    - Hello how can I purchase a wine
+    - Hello how can I purchase a wine on your site
+    - hello how cna I purchase a wine on your website
+
+#---------------------------------------------------Wine Refunds---------------------------------------------------#
+- intent: request_refund
+  examples: |
+    - How can I request a refund?
+    - I want to return a wine and get a refund.
+    - What's the process for refunds?
+    - Can I get my money back for a wine?
+    - How do I initiate a refund?
+    - What should I do if I want a refund?
+    - I need to return a wine. How can I do that?
+    - How can I request a refund for a wine purchase?
+    - Is there a refund policy for wine purchases?
+    - Can you guide me through the refund process?
+    - How can I get a refund for a wine I purchased?
+    - I want to return a wine. How do I go about getting a refund?
+    - Can you assist me with the process of requesting a refund for a wine?
+    - What are the steps to request a refund for a wine?
+    - Is it possible to get a refund if I'm not satisfied with the wine?
+    - How long does it take to receive a refund for a returned wine?
+    - Can I request a refund if the wine I received is damaged or spoiled?
+    - Are there any conditions for requesting a refund for a wine?
+    - Can I return a wine and get a full refund?
+    - What is the refund policy for wine purchases?
+    - How do I start the refund process for a wine?
+    - Can I exchange a wine for a different one instead of getting a refund?
+    - What is the timeframe for requesting a refund for a wine?
+    - Is there a restocking fee for returning a wine?
+    - Can I request a refund if I don't like the taste of the wine?
+    - Do I need to provide a reason for requesting a refund?
+    - Are there any restrictions on requesting a refund for a wine?
+    - Can I get a refund for a wine if I change my mind?
+    - What information do I need to provide when requesting a refund for a wine?
+    - Is there a specific form or procedure for requesting a refund?
+    - Can I request a refund for a wine if it was a gift?
+    - Are all wines eligible for a refund, or are there any exceptions?
+    - What happens if the wine I want to return is part of a bundle or package deal?
+    - Can I get a refund if the wine I ordered is different from what was advertised?
+    - How will I receive the refund for a returned wine?
+    - Can I request a refund if the wine I received is not the vintage I ordered?
+    - Are there any fees associated with returning a wine for a refund?
+    - Can I request a refund for a wine if it was opened but not consumed?
+    - Is there a deadline for requesting a refund for a wine?
+    - Can I return a wine for a refund if I no longer have the original packaging?
+    - How can I check the status of my refund request for a wine?
+    - Can I request a refund if the wine I received is not the brand I ordered?
+    - What should I do if I encounter any issues with the refund process?
+    - Can I request a refund for a wine if it was delivered to the wrong address?
+    - Is there a customer service number I can call for refund-related inquiries?
+    - Can I request a refund for a wine if it was a limited edition or special release?
+    - How will I know if my refund request for a wine has been approved?
+    - How can I refund my ticket
+    - How can I refund my Wine Tasting Event ticket
+    - How can I refund my wine tasting ticket
+    - How can I request a refund for a ticket I purchased
+    - How can I get a refund
+    - How can I get a refund for my wine
+    - How can I get a refunf for my ticket
+
+#---------------------------------------------------Wine Returns---------------------------------------------------#
+- intent: return_wine
+  examples: |
+    - Do I need to return the wine?
+    - Should I send the wine back?
+    - Do I have to return the wine to the venue?
+    - Is it necessary to send the wine back for a refund?
+    - Will I be required to return the wine to get a refund?
+    - Can I keep the wine after requesting a refund?
+    - Do I need to ship the wine back for a refund?
+    - Should I return the wine to the store?
+    - Do I have to return the wine bottle for a refund?
+    - Is returning the wine mandatory?
+    - Can I keep the wine if I request a refund?
+    - What should I do with the wine after requesting a refund?
+    - Can I get a refund without returning the wine?
+    - How does the return process work for wine?
+    - What's the policy on returning the wine for a refund?
+    - Can I request a refund and keep the wine?
+    - Is returning the wine optional for a refund?
+    - What happens to the wine after I request a refund?
+    - Do I have to pay for return shipping of the wine?
+    - Can I return the wine to any venue?
+    - Is the return of the wine time-limited for a refund?
+    - Can I return the wine if it's already opened?
+    - Should I return the wine in its original packaging?
+    - Can I return a partially consumed bottle of wine?
+    - Is there a restocking fee for returning the wine?
+    - How soon should I return the wine for a refund?
+    - Can I return the wine if I don't like the taste?
+    - Do I need a receipt to return the wine?
+    - Can I return a gift of wine for a refund?
+    - What is the process for returning the wine?
+    - Can I return the wine by mail?
+    - Is returning the wine available for online purchases?
+    - Can I return the wine if it's damaged?
+    - What if I don't have the original packaging to return the wine?
+    - Do I need to provide a reason for returning the wine?
+    - Can I exchange the wine for a different bottle?
+    - Is there a time limit for returning the wine?
+    - Can I return the wine if it was a gift?
+    - What if I opened the wine but didn't like it?
+    - Can I return the wine if it's expired?
+    - Is there a fee for returning the wine?
+    - Can I return the wine if it's been stored improperly?
+
+#---------------------------------------------------Where can I see my orders---------------------------------------------------#
+- intent: ask_orders
+  examples: |
+    - Where can I see my orders?
+    - How do I check my order history?
+    - Can you guide me to view my orders?
+    - Where do I find my order details?
+    - How can I see my past orders?
+    - Is there a way to check my order status?
+    - Can you help me find my order information?
+    - Where can I find my order history?
+    - How do I access my order records?
+    - Can you show me my previous orders?
+    - Where can I find my order details?
+    - How can I view my order history?
+    - Can you assist me in checking my orders?
+    - Where do I go to see my order information?
+    - How do I access my past orders?
+    - Is there a way to track my order status?
+    - Can you guide me to find my order details?
+    - How can I see the history of my orders?
+    - Can you help me locate my order history?
+    - Where can I find my previous orders?
+    - How do I check my order records?
+    - Can you show me the list of my orders?
+    - Where can I review my order history?
+    - How can I access my order information?
+    - Can you guide me to check my previous orders?
+    - Where do I find my order status?
+    - How can I track my orders?
+    - Can you assist me in finding my order history?
+    - Where can I see my order records?
+    - How do I check the status of my orders?
+    - Can you show me my order details?
+    - Where can I view my order summary?
+    - How can I see my order details?
+    - Can you guide me to access my order records?
+    - Where do I find my past orders?
+    - How do I check my order status?
+    - Can you assist me in finding my order information?
+    - Where can I find my previous purchases?
+    - How can I see the details of my orders?
+    - Can you show me my order history?
+    - Where can I review my order summary?
+    - How do I access my order details?
+    - Can you guide me to check my order status?
+    - Where do I find my order records?
+    - How can I track my previous orders?
+    - Can you assist me in checking my order history?
+    - Where can I see the list of my orders?
+    - How do I view my order summary?
+    - Can you show me my order information?
+    - Where can I find my order summary?
+
+- intent: ask_wishlist
+  examples: |
+    - Where can I see my wishlist?
+    - How do I check my wishlist?
+    - Can you guide me to view my wishlist?
+    - Where do I find my wishlist items?
+    - How can I see my saved items?
+    - Is there a way to check my wishlist?
+    - Can you help me find my wishlist?
+    - Where can I find my wishlist?
+    - How do I access my wishlist?
+    - Can you show me my wishlist?
+
+- intent: create_account
+  examples: |
+    - How do I create an account?
+    - What's the process to register?
+    - Can you guide me through creating an account?
+    - How can I sign up?
+    - How do I register for an account?
+    - Can you help me with account creation?
+    - How to create an account?
+    - Where do I go to create an account?
+    - What are the steps to register?
+    - Can you show me how to create a new account?
+    - How do I create a new account?
+    - What do I need to do to register?
+    - Can you assist me in signing up?
+    - How can I set up an account?
+    - I want to create an account. What should I do?
+    - Is there a registration process?
+    - Can you explain the account creation steps?
+    - Where can I find the registration form?
+    - What information do I need for account registration?
+    - Do I need an email address to sign up?
+    - How long does it take to register?
+    - Are there any requirements for creating an account?
+    - Can you provide a step-by-step guide to register?
+    - Is there a specific page for account creation?
+    - How can I join your platform?
+    - Can you help me with the sign-up procedure?
+    - Do I need to provide personal details during registration?
+    - Are there any age restrictions for account creation?
+    - Can I register with my social media accounts?
+    - How can I access the registration form?
+    - What happens after I complete the registration process?
+    - Can you assist me in setting up my account?
+    - How can I create an account on your website?
+    - Can you walk me through the account setup?
+    - Is there a fee for registering?
+    - Can I create multiple accounts?
+    - How can I validate my account after registration?
+    - Do I need to choose a username and password?
+    - What should I do if I encounter issues during registration?
+    - Can I edit my account details after signing up?
+    - Is there a confirmation email sent after registration?
+    - Can you provide instructions for account activation?
+    - How can I delete my account if needed?
+    - Are there any security measures for account creation?
+    - Can I use my existing account for multiple devices?
+    - How can I access my account after registration?
+    - Can you clarify the benefits of creating an account?
+    - What happens if I forget my account password?
+    - Can I register with a phone number instead of an email?
+    - How can I create an account with a unique username?
+    - Do I need to agree to any terms and conditions during registration?
+    - Can I sign up for newsletters or updates during registration?
+
+- intent: ask_edit_account
+  examples: |
+    - How do I edit my user profile?
+    - Where can I update my account information?
+    - Can you assist me in modifying my account details?
+    - How can I change my profile settings?
+    - What steps should I follow to edit my account?
+    - Is there a way to update my personal information?
+    - Can you provide guidance on editing my account?
+    - How do I go about changing my account details?
+    - Where can I find the option to edit my user profile?
+    - What's the process to modify my user account?
+    - Can you explain how to edit my profile information?
+    - Is it possible to update my account settings?
+    - How can I make changes to my user profile?
+    - Can you guide me through the account editing process?
+    - How can I access the account editing feature?
+    - What actions should I take to modify my account?
+    - Can you show me the steps for editing my user profile?
+    - Where should I go to update my account details?
+    - How do I navigate to the account editing page?
+    - Can you explain the steps for updating my user profile?
+    - What options are available for editing my account?
+    - How can I modify my account preferences?
+    - Is there a specific page for editing my user profile?
+    - Can you help me with the process of changing my account information?
+    - How do I update my personal details in my account?
+    - What should I do if I want to edit my user account?
+    - Can you provide instructions on how to edit my account settings?
+    - How can I make adjustments to my account profile?
+    - Can you walk me through the steps to modify my account details?
+    - How can I access the account editing functionality?
+    - What information can I update in my user account?
+    - Can you guide me on how to edit my profile settings?
+    - How do I go about updating my user account information?
+    - What are the options for editing my account preferences?
+    - Can you explain how to modify my account profile?
+    - How can I change my email address in my user account?
+    - Is there a specific form for editing my account information?
+    - Can you provide the necessary steps to update my account profile?
+    - How do I navigate to the account editing section?
+    - What steps should I follow to modify my profile settings?
+
+- intent: ask_human_contact
+  examples: |
+    - Can I speak to a human?
+    - Is there someone I can contact?
+    - How can I reach out to a person?
+    - Can you provide me a contact person?
+    - I want to talk to a real person.
+    - Can I get in touch with someone from the venue?
+    - Is there a contact number for the venue?
+    - How do I contact a representative?
+    - Who can I talk to about my issue?
+    - Can you connect me to a human agent?
+    - Is there a customer service representative available?
+    - How can I reach out to the customer support team?
+    - Can you give me a contact number for assistance?
+    - I need to contact someone who works for the venue.
+    - Can I speak with a live person?
+    - I need to talk to a real human.
+    - Is there a way to reach a human representative?
+    - How do I get in touch with a person?
+    - Can you connect me to a human operator?
+    - I'm looking for someone to assist me directly.
+    - Who can I contact for personal assistance?
+    - Is there a phone number to reach a human agent?
+    - I prefer to speak to someone instead of a chatbot.
+    - How can I communicate with a live agent?
+    - Can you provide me with a contact person's information?
+    - I'd like to discuss my issue with a human representative.
+    - Is there a support team member I can speak to?
+    - How do I contact the customer service team?
+    - Can you give me the contact details of a support staff member?
+    - I need to talk to someone about my account.
+    - Is there a helpline or support hotline available?
+    - How can I get in touch with the customer care team?
+    - Can you connect me to a representative who can help?
+    - I require direct assistance from a human being.
+    - Is there a phone number I can call for assistance?
+    - How can I reach out to a human support agent?
+    - Can you provide the contact information for a support specialist?
+    - I'd like to have a conversation with a person, not a bot.
+    - Is there a specific department I should contact for my issue?
+    - How can I speak to a live customer support representative?
+    - Can you direct me to a team member who can help me?
+
+- intent: ask_location
+  examples: |
+    - Where is the venue situated?
+    - What's the exact location of the business?
+    - Can you give me the precise address of the venue?
+    - Where can I locate the business establishment?
+    - What's the street address of the venue?
+    - Can you tell me the whereabouts of the business?
+    - Where can I find the physical presence of the venue?
+    - What's the location of the business on the map?
+    - Can you provide directions to the venue?
+    - Where should I go to reach the venue?
+    - What's the geographical position of the business?
+    - Can you give me the coordinates of the venue?
+    - Where can I visit the establishment?
+    - What's the registered address of the business?
+    - Can you point me to the exact spot of the venue?
+    - Where can I physically go to meet the business representatives?
+    - What's the specific area where the venue is located?
+    - Can you guide me to the venue's physical location?
+    - Where can I find the business on the city map?
+    - What's the landmark near the business's address?
+    - Can you tell me the street and number of the venue?
+    - Where exactly can I find the business on the street?
+    - What's the locality of the business's physical presence?
+    - Can you provide the full address of the venue?
+    - Where is the business situated within the city?
+    - What's the district where the business is located?
+    - Can you give me the specific zone of the venue?
+    - Where is the exact place I need to go for the business?
+    - What's the neighborhood of the business's physical address?
+    - Can you tell me the city where the venue is positioned?
+    - Where exactly can I find the business establishment?
+    - What's the region where the business is situated?
+    - Can you give me the precise location coordinates of the venue?
+    - Where can I physically go to visit the venue?
+    - What's the physical position of the business on the map?
+    - Can you guide me on how to reach the venue's location?
+    - Where should I head to find the business?
+    - What's the exact street name of the venue's address?
+    - Can you tell me the specific city where the venue is?
+    - Where is the establishment's physical address situated?
+
+- intent: ask_purchase_ticket
+  examples: |
+    - How can I purchase a ticket to an event?
+    - What is the process to buy tickets for an event?
+    - Can you guide me on purchasing event tickets?
+    - How do I get tickets for a wine tasting event?
+    - Can you help me with ticket purchase for an event?
+    - How to buy tickets for an event?
+    - Where can I purchase event tickets?
+    - What are the steps to book tickets for a wine tasting event?
+    - Can you show me how to get tickets for an event?
+    - How can I attend an event by purchasing a ticket?
+    - Is it possible to buy event tickets online?
+    - What is the ticket booking procedure for events?
+    - Where can I find information about purchasing event tickets?
+    - Can I reserve tickets for an event in advance?
+    - Are there any discounts available on event tickets?
+    - Can I get a refund for event tickets if I can't attend?
+    - What payment methods are accepted for purchasing event tickets?
+    - Do I need to create an account to buy event tickets?
+    - How early should I purchase event tickets?
+    - Are there any age restrictions for purchasing event tickets?
+    - Can I buy tickets for multiple events at once?
+    - What is the maximum number of tickets I can purchase for an event?
+    - Can I transfer my event ticket to someone else?
+    - How can I check the availability of tickets for an event?
+    - Can I buy event tickets over the phone?
+    - Are there any VIP or premium ticket options available for events?
+    - Do I need to show ID when purchasing event tickets?
+    - Are there any group discounts for event tickets?
+    - Can I buy event tickets as a gift for someone else?
+    - How can I access my event tickets after purchase?
+    - Are there any hidden fees when purchasing event tickets?
+    - Can I upgrade my ticket to a different category after purchase?
+    - What is the process for reselling event tickets?
+    - Can I cancel my event ticket and get a refund?
+    - How can I download or print my event tickets?
+    - Are there any early bird offers for event tickets?
+    - Can I purchase event tickets for a specific date or time slot?
+    - Are event tickets transferable between different events?
+    - Can I purchase event tickets at the venue?
+    - Is there a limit to the number of event tickets I can purchase?
+    - How can I check if my event ticket is valid?
+    - Can I purchase event tickets from outside the country?
+    - Are there any age restrictions for attending wine tasting events?
+    - Can I bring my own food or drinks to an event?
+
+- intent: ask_events
+  examples: |
+    - What events are there to attend?
+    - Can you show me the upcoming events?
+    - What are the events I can attend?
+    - Are there any interesting events coming up?
+    - Where can I find information about upcoming events?
+    - Can you provide details about the events happening?
+    - How can I see the list of events?
+    - Which events are happening in the near future?
+    - Are there any special events I should know about?
+    - Is there anything interesting happening soon?
+    - Can you tell me about the events scheduled?
+    - What are the upcoming events I can join?
+    - How can I find out about the events at the venue?
+    - Can you give me information about the events?
+    - Where can I get the details of the events?
+    - How can I stay updated about the events?
+    - Are there any events happening this month?
+    - Can you recommend any events to attend?
+    - What events are happening in the city?
+    - Are there any popular events coming up?
+    - Can you suggest any events to check out?
+    - Where can I see the event calendar?
+    - Can you give me a list of events to attend?
+    - How can I know about the events in advance?
+    - Are there any ticketed events I can attend?
+    - Can you provide the schedule of the events?
+    - Where can I find the event listings?
+    - How can I stay informed about the events?
+    - Are there any upcoming events for wine lovers?
+    - Can you recommend any wine tasting events?
+    - What are the wine-related events happening soon?
+    - Are there any events for wine enthusiasts?
+    - Can you suggest wine events in the area?
+    - Where can I find wine tasting events?
+    - How can I get information about wine events?
+    - Are there any wine-themed events coming up?
+    - Can you give me details about wine events?
+    - What are the wine events I can participate in?
+    - How can I attend wine tasting events?
+    - Where can I find wine events near me?
+
+- intent: ask_purchase_ticket
+  examples: |
+      - How can I see my purchased ticket?
+      - Where do I go to access my ticket?
+      - Can you assist me in finding my purchased ticket?
+      - I want to check where my ticket is.
+      - Is there a specific section to see my ticket?
+      - Show me the steps to access my purchased ticket.
+      - Where should I look for my ticket after purchasing?
+      - How can I track the status of my ticket?
+      - Where can I find my ticket confirmation?
+      - How do I get to my purchased ticket?
+      - Can you help me find my ticket?
+      - How do I retrieve my purchased ticket?
+      - Where can I access my ticket details?
+      - How do I see the ticket I purchased?
+      - Can you provide information on how to access my ticket?
+      - Where is my ticket located?
+      - How can I view my ticket information?
+      - Can you tell me where to find my ticket after I buy it?
+      - How can I get my ticket?
+      - Where do I go to see my ticket purchase?
+      - Can you guide me on accessing my ticket?
+      - How can I check my ticket status?
+      - Where can I find the ticket I bought?
+      - How do I access my ticket confirmation?
+      - Can you show me the page for my purchased ticket?
+      - Where can I retrieve my ticket?
+      - How do I see my ticket after making the purchase?
+      - Where can I view my ticket details?
+      - How do I find my ticket after buying it?
+      - Can you guide me on checking my ticket status?
+      - Where is my ticket stored?
+      - How can I see the details of my purchased ticket?
+      - Can you help me locate my ticket?
+      - How do I access my ticket after the purchase?
+      - Where can I check my ticket information?
+      - How do I find my ticket in the system?
+      - Can you provide instructions on how to access my ticket?
+      - Where can I retrieve my purchased ticket?
+
+- intent: ask_user_icon
+  examples: |
+      - What is the user icon?
+      - Where can I find the user icon?
+      - What does the user icon look like?
+      - Can you tell me about the user icon?
+      - What is the symbol for the user icon?
+      - Where is the user icon located?
+      - How can I access the user icon?
+      - Can you explain the user icon to me?
+      - What does the user icon signify?
+      - Where do I see the user icon?
+      - How do I identify the user icon?
+      - Can you show me the user icon?
+      - What is represented by the user icon?
+      - Where can I spot the user icon?
+      - How does the user icon look?
+      - Can you describe the user icon?
+      - What does the user icon mean?
+      - Where is the user icon placed?
+      - How do I recognize the user icon?
+      - Can you provide information about the user icon?
+      - What does the user icon indicate?
+      - Where do I find the user icon on the website?
+      - How can I see the user icon?
+      - Can you give me details about the user icon?
+      - What does the user icon symbolize?
+      - Where can I view the user icon?
+      - How do I access the user icon on the page?
+      - Can you elaborate on the user icon?
+      - What does the user icon represent?
+      - Where is the user icon situated?
+      - How do I find the user icon on the site?
+      - Can you point out the user icon?
+      - What does the user icon look like on the website?
+      - Where can I get to the user icon?
+      - How do I see the user icon on the screen?
+      - Can you clarify the user icon?
+      - What does the user icon stand for?
+      - Where is the user icon displayed?
+      - How do I access the user icon on the platform?
+      - Can you give me a brief about the user icon?
+
+- intent: ask_meaning_blacklist
+  examples: |
+    - What does "Blacklist" mean?
+    - Explain "Blacklist" to me
+    - Can you tell me about the "Blacklist"?
+
+

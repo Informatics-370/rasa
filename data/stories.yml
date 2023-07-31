@@ -1,0 +1,100 @@
+version: '3.0'
+stories:
+- story: Simple hello
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: Simple goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: User wants to know about wines
+  steps:
+  - intent: ask_wines
+  - action: utter_ask_wines
+
+- story: User wants to purchase a wine
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_wines
+    - action: utter_ask_wines
+    - intent: purchase_wine
+    - action: utter_purchase_wine
+
+- story: User wants to request a refund
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: request_refund
+    - action: utter_request_refund
+
+- story: User asks about returning the wine
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: return_wine
+  - action: utter_return_wine
+
+- story: User wants to know where to see their orders
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_orders
+    - action: utter_ask_orders
+
+- story: User wants to know where they can see their wishlist
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_wishlist
+  - action: utter_ask_wishlist
+
+- story: User wants to know how to create an account
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: create_account
+  - action: utter_create_account
+
+- story: User asks how to edit account
+  steps:
+  - intent: ask_edit_account
+  - action: utter_edit_account_instructions
+
+- story: Customer asks to speak to a human
+  steps:
+  - intent: ask_human_contact
+  - action: utter_human_contact
+
+- story: User asks about the venue location
+  steps:
+  - intent: ask_location
+  - action: utter_location
+
+- story: User asks how to purchase a ticket to an event/wine tasting event
+  steps:
+  - intent: ask_purchase_ticket
+  - action: utter_ask_purchase_ticket
+
+- story: User asks about events
+  steps:
+  - intent: ask_events
+  - action: utter_ask_events
+
+- story: User asks about their purchased ticket
+  steps:
+  - intent: ask_purchased_ticket
+  - action: utter_purchased_ticket
+
+- story: User asks about "Blacklist"
+  steps:
+  - intent: ask_meaning_blacklist
+  - action: action_respond_blacklist_meaning
+
+- story: Fallback story
+  steps:
+  - intent: nlu_fallback
+  - action: utter_default

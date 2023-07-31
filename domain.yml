@@ -1,0 +1,137 @@
+version: '3.0'
+
+intents:
+  - greet
+  - goodbye
+  - ask_wines
+  - purchase_wine
+  - request_refund
+  - return_wine
+  - ask_orders
+  - ask_wishlist
+  - create_account
+  - ask_edit_account
+  - ask_human_contact
+  - ask_location
+  - ask_purchase_ticket
+  - ask_events
+  - ask_purchased_ticket
+  - ask_user_icon
+  - ask_meaning_blacklist
+
+responses:
+  utter_greet:
+    - text: "Hello! How can I assist you today? I can help you with Wines, Events, and general queries such as contact details, payments, and refunds."
+
+  utter_goodbye:
+    - text: "Goodbye! Feel free to return if you have more queries. Have a great day!"
+
+  utter_ask_wines:
+    - text: "You can explore our wide variety of wines on the 'Wines' page. Just click on 'Shop' in the navigation bar. On the 'Shop' page, you can search and filter for wines using the search bar. You can filter by name, price, varietal, and type."
+
+  utter_purchase_wine:
+    - text: "To purchase a wine, follow these steps: 
+    1. Browse our selection of wines on the 'Shop' page. 
+    2. Choose the wine you want to buy. 
+    3. Add the wine to your cart. 
+    4. Proceed to the checkout to finalize your purchase. If you have any further questions, feel free to ask."
+
+  utter_request_refund:
+    - text: "Please note, we only offer refunds for Wine products purchased and not Event Tickets. If you would like to request a refund for a wine purchase, please follow these steps:
+        1. Click on the 'User' icon in the navigation bar.
+        2. You will be redirected to the User page.
+        3. On the User page, click on 'Refunds' in the side navigation.
+        4. On the Refunds page, you can request a refund and provide the necessary details for the refund.
+        5. Your refund request will be sent to our company for review.
+        6. You can track the status of your refund on the Refund Status page.
+        7. If your refund is approved, the money will be refunded to your account."
+
+  utter_return_wine:
+    - text: "No, you don't have to return the wine to the venue. We will process the refund without requiring the return of the wine. If you have any further questions, feel free to ask."
+
+  utter_ask_orders:
+    - text: "To view your orders, follow these steps:
+      1. Click on the 'User' icon in the navigation bar.
+      2. You will be redirected to the User Page.
+      3. On the User page, click on the 'Orders' tab in the side navigation.
+      4. You will see a list of all your orders and their respective statuses."
+
+  utter_ask_wishlist:
+    - text: "To view your wishlist, follow these steps:
+      1. Click on the 'User' icon in the navigation bar.
+      2. You will be redirected to the User Page.
+      3. On the User page, click on the 'Wishlist' tab in the side navigation.
+      4. You will see a list of your wishlist items."
+
+  utter_create_account:
+    - text: "To create your account, follow these steps:
+      1. Click on the 'Login' button in the navigation bar.
+      2. You will be redirected to the Login Page.
+      3. Click on the 'Register Account' link.
+      4. On the Register page, fill in your details and click on the 'Register' button when finished."
+
+  utter_edit_account_instructions:
+    - text: "To edit your account, follow these steps:
+      1. Click on the 'User' icon in the navigation bar.
+      2. You will be redirected to the User Pages.
+      3. Click on the 'User Informaton' tab in the side navigation.
+      4. This will display all your account details that you can edit..
+      If you have any further questions, feel free to ask."
+
+  utter_human_contact:
+    - text: "Yes, you can contact our customer support team at 012 940 1900. They will be happy to assist you."
+
+  utter_location:
+    - text: "You can find us in the Pretoria-East region. Here is a link to our location using Google Maps: https://goo.gl/maps/hfajoLATXbwQG7c37"
+
+  utter_ask_purchase_ticket:
+    - text: "To purchase a ticket to an event, please follow these steps:
+      1. Click on 'Events' in the navigation bar.
+      2. On the Events page, select the event you want to attend.
+      3. Purchase the ticket. Please note that you need to be signed in to make a purchase.
+      4. After the purchase, you will receive an email containing the event details and a QR code. Please bring the QR code with you to scan upon arrival at the event."
+
+  utter_ask_events:
+    - text: "To see what events there are to attend, please follow these instructions:
+      1. Navigate to the Events page by clicking on the 'Events' tab in the navigation bar.
+      2. You will be redirected to the Events page.
+      3. The page will display all the upcoming events you can attend."
+
+  utter_purchased_ticket:
+    - text: "To see your purchased ticket, please follow these steps:
+      1. Click on the User icon in the navigation bar.
+      2. You will be redirected to the User Page.
+      3. Click on the Tickets tab in the side navigation.
+      4. You will be redirected to the Tickets page where all your purchased tickets will be displayed."
+
+  utter_ask_user_icon:
+    - text: "The user icon is on the upper right corner of the navigation bar. It has a circular shape with a human-like figure."
+
+  utter_blacklist_meaning:
+    - text: "The Blacklist is a way for our venue to have control over who attends our events. If a user finds themselves listed on the Blacklist, it means you have been banned from attending any more of The Promenade's Wine Tasting events."
+
+  utter_default:
+    - text: "I didn't quite catch that. Could you please rephrase your question or give us a call at 012 940 1900 for further assistance?"
+
+actions:
+  - utter_greet
+  - utter_goodbye
+  - utter_ask_wines
+  - utter_purchase_wine
+  - utter_request_refund
+  - utter_return_wine
+  - utter_ask_orders
+  - utter_ask_wishlist
+  - utter_create_account
+  - utter_edit_account_instructions
+  - utter_human_contact
+  - utter_location
+  - utter_ask_purchase_ticket
+  - utter_ask_events
+  - utter_purchased_ticket
+  - utter_ask_user_icon
+  - action_respond_blacklist_meaning
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
