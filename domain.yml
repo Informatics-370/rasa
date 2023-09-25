@@ -18,16 +18,17 @@ intents:
   - ask_purchased_ticket
   - ask_user_icon
   - ask_meaning_blacklist
+  - ask_name
 
 responses:
   utter_greet:
-    - text: "Hello! How can I assist you today? I can help you with Wines, Events, and general queries such as contact details, payments, and refunds."
+    - text: "Hello my name is Rosie Rosé! How can I assist you today?"
 
   utter_goodbye:
     - text: "Goodbye! Feel free to return if you have more queries. Have a great day!"
 
   utter_ask_wines:
-    - text: "You can explore our wide variety of wines on the 'Wines' page. Just click on 'Shop' in the navigation bar. On the 'Shop' page, you can search and filter for wines using the search bar. You can filter by name, price, varietal, and type."
+    - text: "You can explore our wide variety of wines on the 'Wines' page. Just click on 'Shop' in the navigation bar. On the 'Shop' page, you filter through our wide varieties and pick your favourite wines."
 
   utter_purchase_wine:
     - text: "To purchase a wine, follow these steps: 
@@ -39,8 +40,8 @@ responses:
   utter_request_refund:
     - text: "Please note, we only offer refunds for Wine products purchased and not Event Tickets. If you would like to request a refund for a wine purchase, please follow these steps:
         1. Click on the 'User' icon in the navigation bar.
-        2. You will be redirected to the User page.
-        3. On the User page, click on 'Refunds' in the side navigation.
+        2. You will be redirected to the User Informaton page.
+        3. Then click on 'Refunds' in the side navigation.
         4. On the Refunds page, you can request a refund and provide the necessary details for the refund.
         5. Your refund request will be sent to our company for review.
         6. You can track the status of your refund on the Refund Status page.
@@ -51,15 +52,15 @@ responses:
 
   utter_ask_orders:
     - text: "To view your orders, follow these steps:
-      1. Click on the 'User' icon in the navigation bar.
-      2. You will be redirected to the User Page.
-      3. On the User page, click on the 'Orders' tab in the side navigation.
-      4. You will see a list of all your orders and their respective statuses."
+      1. Click on the 'User' icon in the navigation bar (your username will appear next to it as well).
+      2. You will be redirected to the User Informaton Page.
+      3. Then click on the 'Orders' tab in the side navigation.
+      4. You will see a list of all your orders and their respective statuses on wether or not they are ready for pickup."
 
   utter_ask_wishlist:
     - text: "To view your wishlist, follow these steps:
       1. Click on the 'User' icon in the navigation bar.
-      2. You will be redirected to the User Page.
+      2. You will be redirected to the User Informaton page.
       3. On the User page, click on the 'Wishlist' tab in the side navigation.
       4. You will see a list of your wishlist items."
 
@@ -67,7 +68,7 @@ responses:
     - text: "To create your account, follow these steps:
       1. Click on the 'Login' button in the navigation bar.
       2. You will be redirected to the Login Page.
-      3. Click on the 'Register Account' link.
+      3. Click on the 'Register' link in blue text.
       4. On the Register page, fill in your details and click on the 'Register' button when finished."
 
   utter_edit_account_instructions:
@@ -113,6 +114,9 @@ responses:
   utter_default:
     - text: "I didn't quite catch that. Could you please rephrase your question or give us a call at 012 940 1900 for further assistance?"
 
+  utter_name:
+    - text: "My name is Rosie Rosé."
+
 actions:
   - utter_greet
   - utter_goodbye
@@ -131,6 +135,7 @@ actions:
   - utter_purchased_ticket
   - utter_ask_user_icon
   - action_respond_blacklist_meaning
+  - utter_name
 
 session_config:
   session_expiration_time: 60

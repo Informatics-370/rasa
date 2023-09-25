@@ -98,3 +98,8 @@ stories:
   steps:
   - intent: nlu_fallback
   - action: utter_default
+
+- story: Story for asking name
+  steps:
+  - intent: ask_name
+  - action: utter_name

@@ -720,4 +720,10 @@ nlu:
     - Explain "Blacklist" to me
     - Can you tell me about the "Blacklist"?
 
+- intent: ask_name
+  examples: |
+    - What is your name?
+    - Can you tell me your name?
+    - Who are you?
+    - How should I address you?
 

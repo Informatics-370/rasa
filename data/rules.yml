@@ -89,3 +89,8 @@ rules:
   steps:
   - intent: nlu_fallback
   - action: utter_default
+
+- rule: Rule for asking name
+  steps:
+  - intent: ask_name
+  - action: utter_name
