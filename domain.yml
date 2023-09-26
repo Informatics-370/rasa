@@ -45,7 +45,7 @@ responses:
         4. On the Refunds page, you can request a refund and provide the necessary details for the refund.
         5. Your refund request will be sent to our company for review.
         6. You can track the status of your refund on the Refund Status page.
-        7. If your refund is approved, the money will be refunded to your account."
+        7. If your refund is approved, you will receive an SMS with a discount code you can use for your next purchase"
 
   utter_return_wine:
     - text: "No, you don't have to return the wine to the venue. We will process the refund without requiring the return of the wine. If you have any further questions, feel free to ask."
